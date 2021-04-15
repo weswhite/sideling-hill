@@ -5,6 +5,7 @@ const stripePromise = loadStripe(
 );
 //@ts-ignore
 export async function initiateCheckout({ lineItems } = {}) {
+  console.log(process.env);
   const stripe = await stripePromise;
 
   await stripe.redirectToCheckout({

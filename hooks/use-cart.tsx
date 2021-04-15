@@ -65,6 +65,7 @@ export function useCartState() {
   }
 
   function checkout() {
+    console.log(process.env);
     initiateCheckout({
       lineItems: cartItems.map(({ id, quantity }) => {
         return {
