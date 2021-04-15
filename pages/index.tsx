@@ -130,7 +130,7 @@ export default function Home() {
                     className={styles.button}
                     onClick={() => addToCart({ id })}
                   >
-                    Buy
+                    Add to Cart
                   </button>
                 </p>
               </li>
