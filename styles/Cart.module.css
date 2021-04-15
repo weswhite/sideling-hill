@@ -16,6 +16,27 @@
   align-items: center;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5em;
+}
+
+.title svg {
+  margin-right: 0.5em;
+}
+
+.checkout {
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+
+.table {
+  font-size: 1.2rem;
+}
+
 .footer {
   width: 100%;
   height: 100px;
@@ -153,26 +174,12 @@
   padding: 0;
 }
 
-@keyframes colorChange {
-  0% {
-    fill: #000;
-  }
-  30% {
-    fill: #000;
-  }
-  40% {
-    fill: #ffd700;
-  }
-  50% {
-    fill: #000;
-  }
-  100% {
-    fill: #000;
-  }
+.cartQuantity input {
+  width: 5em;
+  padding: 0.45em;
 }
-.logo {
-  animation: colorChange 20s infinite;
-}
-.logoSize {
-  height: 60vh;
+
+.cartQuantity button {
+  font-size: 0.6em;
+  margin-left: 1em;
 }
