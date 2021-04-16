@@ -3,21 +3,21 @@
       "id": "price_1IgdDdCHOoSsg65dofGWGOyL",
       "title": "Variant Saddle Pack",
       "description": "grizzly/dungrizzly/badger variant saddle pack buy 3 get one free mix and match colors on the saddle packs.",
-      "image": "/images/variant.jpg",
+      "image": "/images/variant.png",
       "price": 12.00
     },
     {
       "id": "price_1IgdD4CHOoSsg65d3vvnfN5c",
       "title": "Grizzly Hen Neck",
       "description": "Grizzly Hen Neck. Great value. Beautiful grizzly. Awesome bird",
-      "image": "/images/hen.jpg",
+      "image": "/images/hen.png",
       "price": 25.00
     },
     {
       "id": "price_1IgdCbCHOoSsg65dkhAP3Wj6",
       "title": "Cream Rooster Neck",
       "description": "Grade 1 Cream Rooster Neck",
-      "image": "/images/saddle.jpg",
+      "image": "/images/saddle.png",
       "price": 55.00
     }
   ]

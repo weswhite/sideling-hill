@@ -157,13 +157,13 @@
   0% {
     fill: #000;
   }
-  30% {
+  25% {
     fill: #000;
   }
   40% {
     fill: #ffd700;
   }
-  50% {
+  55% {
     fill: #000;
   }
   100% {
@@ -171,7 +171,7 @@
   }
 }
 .logo {
-  animation: colorChange 20s infinite;
+  animation: colorChange 12s infinite;
 }
 .logoSize {
   height: 60vh;
