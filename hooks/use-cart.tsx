@@ -1,21 +1,32 @@
 import { useState, createContext, useContext, useEffect } from "react";
-
 import { initiateCheckout } from "../lib/payments";
 import { getStorageItem, setStorageItem } from "../lib/storage";
-
 import products from "../products.json";
 
 const CART_STATE_KEY = "cart";
+
+interface Cart {
+  products: any;
+}
 
 const defaultCart = {
   products: {},
 };
 
-//@ts-ignore
-export const CartContext = createContext();
+const initialCart = {
+  cart: null,
+  cartItems: null,
+  subtotal: null,
+  quantity: null,
+  addToCart: (item: any) => {},
+  checkout: () => {},
+  updateItem: (item: any) => {},
+};
+
+export const CartContext = createContext(initialCart);
 
 export function useCartState() {
-  const [cart, updateCart] = useState(defaultCart);
+  const [cart, updateCart] = useState<Cart>(defaultCart);
 
   useEffect(() => {
     const data = getStorageItem(CART_STATE_KEY);

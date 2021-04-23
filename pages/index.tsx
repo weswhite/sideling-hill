@@ -2,29 +2,21 @@ import Head from "next/head";
 import Link from "next/link";
 //@ts-ignore
 import styles from "../styles/Home.module.css";
-
 import { useCart } from "../hooks/use-cart";
-
 import products from "../products.json";
+import Footer from "../components/Footer";
 
 export default function Home() {
-  //@ts-ignore
   const { addToCart } = useCart();
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Sideling Hill Hackle</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        {/* <img
-          className={styles.logo}
-          src={"/sideling-hill.svg"}
-          alt={"Sideling Hill Hackle"}
-        /> */}
-
         <svg
           version="1.0"
           width="1408.000000pt"
@@ -138,6 +130,7 @@ export default function Home() {
           })}
         </ul>
       </main>
+      <Footer />
     </div>
   );
 }
