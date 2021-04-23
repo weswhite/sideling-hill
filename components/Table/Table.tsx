@@ -1,7 +1,18 @@
 //@ts-ignore
 import styles from "./Table.module.css";
 
-const Table = ({ className, data, columns }) => {
+export interface Column {
+  columnId: string;
+  Header: string;
+}
+
+interface TableProps {
+  className: string;
+  data: any;
+  columns: Column[];
+}
+
+const Table: React.FC<TableProps> = ({ className, data, columns }) => {
   let tableClassName = styles.table;
 
   if (className) {

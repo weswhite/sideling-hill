@@ -1,10 +1,15 @@
 import { loadStripe } from "@stripe/stripe-js";
 
+export interface LineItem {
+  price: string;
+  quantity: number;
+}
+
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 );
-//@ts-ignore
-export async function initiateCheckout({ lineItems } = {}) {
+
+export const initiateCheckout = async (lineItems) => {
   const stripe = await stripePromise;
 
   await stripe.redirectToCheckout({
@@ -13,4 +18,4 @@ export async function initiateCheckout({ lineItems } = {}) {
     successUrl: `${window.location.origin}?session_id={CHECKOUT_SESSION_ID}`,
     cancelUrl: window.location.origin,
   });
-}
+};

@@ -5,7 +5,7 @@ import styles from "./Nav.module.css";
 
 import { useCart } from "../../hooks/use-cart";
 
-const Nav = () => {
+const Nav: React.FC = () => {
   const { subtotal } = useCart();
   return (
     <nav className={styles.nav}>

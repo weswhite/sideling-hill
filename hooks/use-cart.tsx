@@ -9,6 +9,12 @@ interface Cart {
   products: any;
 }
 
+interface CartItems {
+  quantity: number;
+  pricePerUnit: number;
+  id: string;
+}
+
 const defaultCart = {
   products: {},
 };
@@ -39,7 +45,7 @@ export function useCartState() {
     setStorageItem(CART_STATE_KEY, cart);
   }, [cart]);
 
-  const cartItems = Object.keys(cart.products).map((key) => {
+  const cartItems: CartItems[] = Object.keys(cart.products).map((key) => {
     const product = products.find(({ id }) => `${id}` === `${key}`);
     return {
       ...cart.products[key],
@@ -47,7 +53,7 @@ export function useCartState() {
     };
   });
 
-  const subtotal = cartItems.reduce(
+  const subtotal: number = cartItems.reduce(
     (accumulator, { pricePerUnit, quantity }) => {
       return accumulator + pricePerUnit * quantity;
     },

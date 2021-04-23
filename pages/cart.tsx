@@ -5,9 +5,10 @@ import styles from "../styles/Cart.module.css";
 import { useCart } from "../hooks/use-cart";
 import products from "../products.json";
 import Table from "../components/Table";
+import { Column } from "../components/Table/Table";
 import Footer from "../components/Footer";
 
-const columns = [
+const columns: Column[] = [
   {
     columnId: "title",
     Header: "Product Name",
@@ -80,9 +81,7 @@ export default function Home() {
         <h1 className={styles.title}>
           <FaShoppingCart /> Cart
         </h1>
-
         <Table className={styles.table} data={data} columns={columns} />
-
         <p className={styles.checkout}>
           <button className={styles.button} onClick={checkout}>
             Check Out
